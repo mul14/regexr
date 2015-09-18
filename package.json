@@ -1,6 +1,8 @@
 {
   "name": "RegExr",
   "version": "2.0.0",
+  "license": "MIT",
+  "main": "main.js",
   "repository": "http://github.com/gskinner/regexr/regexr.git",
   "devDependencies": {
     "browserify": "^10.2.1",

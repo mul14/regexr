@@ -17,7 +17,7 @@ s.match = function (regex, str, callback) {
 			s.worker.terminate();
 		}
 
-		s.worker = new Worker("js/regExWorker.template.js");
+		s.worker = new Worker("http:localhost/js/regExWorker.template.js");
 
 		s.worker.onmessage = function (evt) {
 			// When the worker says its loaded start a timer. (For IE 10);
