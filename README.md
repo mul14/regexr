@@ -1,53 +1,26 @@
-RegExr
-======
+RegExr + Electron
+=================
 
-# About
-This is the source for [RegExr.com](http://regexr.com/)
-RegExr is a HTML/JS based tool for creating, testing, and learning about Regular Expressions.
+Install Electron globally http://electron.atom.io/#get-started
 
-# Build
-## RegExr uses [Grunt](http://gruntjs.com/) to manage the build process.
+```
+npm install electron-prebuilt -g
+```
 
-## To use
+Run Grunt
 
-Note that this requires a familiarity with using the command line.
-The example commands shown are for use with the OSX Terminal.
+```
+grunt build
+```
 
-### Install dependencies
+Open the app using electron
 
-Node (0.10.24 or greater is required):
+```
+electron .
+```
 
-	# check the version via the command line
-	node -v
+OR
 
-If your Node install is out of date, get the latest from [NodeJS.org](http://nodejs.org/)
-
-After node is setup, install the other dependencies. You may want to familiarize yourself with the Node Packager Manager (NPM) before proceeding.
-
-	# Install the grunt command line utility globally
-	sudo npm install grunt-cli -g
-
-	# Install all the dependencies from package.json
-	npm install
-
-### Development
-Run ```grunt;``` to start a local dev server. grunt will also watch for changes in the local sass and javascript files.
-
-### Building
-To prepare the site for a deploy run:
-
-	grunt build;
-
-This command will:
-
-* Copy all required assets to the build/ folder.
-* Combine and minify the *.js files
-* Compile and minify the sass
-* Inject js/index.template.js into the index.html file
-* Minify the index.html file
-
-
-# Code Style
-If you would like to contribute back to RegExr.com please send us pull requests.
-Please make sure they are well formatted and follow the style specified out in the existing files.
-Mainly just keep your white space as tabs, and all line breaks as \n.
+```
+grunt electron
+```

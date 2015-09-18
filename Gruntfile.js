@@ -120,6 +120,19 @@ module.exports = function (grunt) {
 
 		clean: {
 			build: ["<%= deployFolder %>!(v1|.git|php|sitemap.txt|*.md)**"]
+		},
+
+		electron: {
+			osxBuild: {
+				options: {
+					name: 'Fixture',
+					dir: 'app',
+					out: 'dist',
+					version: '0.25.3',
+					platform: 'darwin',
+					arch: 'x64'
+				}
+			}
 		}
 	});
 
@@ -134,6 +147,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-browserify');
+	grunt.loadNpmTasks('grunt-electron');
 	grunt.loadTasks('tasks/');
 
 	/**
@@ -168,4 +182,6 @@ module.exports = function (grunt) {
 		"copy",
 		"connect:build"
 	]);
+
+	grunt.registerTask("electron", ["electron"]);
 };
