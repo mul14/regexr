@@ -1,5 +1,5 @@
-RegExr + Electron
-=================
+RegExr + Electron Demo
+======================
 
 Install Electron globally http://electron.atom.io/#get-started
 
@@ -24,3 +24,5 @@ OR
 ```
 grunt electron
 ```
+
+<img src="regexr-electron.jpg" />
